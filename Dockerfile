@@ -1,13 +1,13 @@
-FROM debian:latest
+FROM python:3.10
 
 RUN apt update && apt upgrade -y
-RUN apt install git python3-pip ffmpeg -y
+RUN apt install git ffmpeg -y
 
-RUN mkdir /safone/
-WORKDIR /safone/
-COPY . /safone/
+WORKDIR /app
 
-RUN python3 -m pip install --upgrade pip --break-system-packages
-RUN pip3 install -U -r requirements.txt
+COPY . /app/
 
-CMD python3 main.py
+RUN pip3 install --upgrade pip --break-system-packages
+RUN pip3 install -r requirements.txt --break-system-packages
+
+CMD ["python3", "main.py"]
