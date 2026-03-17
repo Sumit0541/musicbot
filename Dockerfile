@@ -4,7 +4,6 @@ RUN apt update && apt upgrade -y
 RUN apt install git ffmpeg -y
 
 WORKDIR /app
-
 COPY . /app/
 
 RUN pip3 install --upgrade pip --break-system-packages
