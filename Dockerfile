@@ -7,7 +7,7 @@ RUN mkdir /safone/
 WORKDIR /safone/
 COPY . /safone/
 
-RUN pip3 install --upgrade pip
+RUN python3 -m pip install --upgrade pip --break-system-packages
 RUN pip3 install -U -r requirements.txt
 
 CMD python3 main.py
