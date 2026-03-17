@@ -10,3 +10,4 @@ RUN pip3 install --upgrade pip --break-system-packages
 RUN pip3 install -r requirements.txt --break-system-packages
 
 CMD ["python3", "main.py"]
+
