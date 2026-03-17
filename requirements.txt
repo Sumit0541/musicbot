@@ -5,4 +5,4 @@ ffmpeg-python
 python-dotenv
 requests
 youtube-search-python
-pytgcalls==3.0.0
+pytgcalls==3.0.0.dev22
